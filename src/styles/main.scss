@@ -1,0 +1,41 @@
+@import 'typography';
+@import 'vars';
+@import 'components/';
+@import 'sections/';
+
+//Font-Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --primary:        #{$primary};
+  --primaryLight:   #{$primaryLight};
+  --primaryDark:    #{$primaryDark};
+  --light:          #{$light};
+  --light2:         #{$light2};
+  --dark:           #{$dark};
+  --dark2:          #{$dark2};
+}
+
+body {
+  color: var(--light);
+  background-color: var(--dark);
+
+  &.theme-light {
+    --light:          #{$dark};
+    --light2:         #{$dark2};
+    --dark:           #{$light};
+    --dark2:          #{$light2};
+  }
+}
+
+a {
+  color: inherit;
+}
+
+.width-1200 {
+  max-width: 1200px;
+}
+
+// .alternative-bg {
+//   background-color: var(--dark2);
+// }

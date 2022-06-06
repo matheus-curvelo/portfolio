@@ -1,0 +1,91 @@
+.btn {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  line-height: 1rem;
+  font-weight: 400;
+
+  & > svg {
+    display: inline-block;
+    // width: 18px;
+
+    &:not(:only-child):first-child {
+      margin-right: 8px;
+    }
+
+    &:not(:only-child):last-child {
+      margin-left: 8px;
+    }
+  }
+
+  & > i {
+    &:not(:only-child):first-child {
+      margin-right: 8px;
+    }
+
+    &:not(:only-child):last-child {
+      margin-left: 8px;
+    }
+  }
+
+  &.btn-dev {
+    color: $primaryLight;
+    background-color: transparent;
+    border: 2px solid $primaryLight;
+    padding: 7px;
+    cursor: default;
+
+    &:hover {
+      color: $light;
+      background-color: $primaryLight;
+      cursor: default;
+    }
+  }
+
+  // Tamanhos
+  &.btn-large {
+    padding: 10px 18px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
+    & > svg {
+      width: 1.5rem;
+    }
+  }
+
+  // Temas
+  &.btn-primary {
+    color: $light;
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover {
+      background-color: $primaryDark;
+      border-color: $primaryDark;
+    }
+  }
+
+  &.btn-light {
+    color: $dark;
+    background-color: $light;
+    border-color: $light;
+
+    &:hover {
+      color: $light;
+      background-color: $dark;
+      border-color: $dark;
+    }
+  }
+
+  &.btn-dark {
+    color: $light;
+    background-color: $dark;
+    border-color: $dark;
+
+    &:hover {
+      color: $dark;
+      background-color: $light;
+      border-color: $light;
+    }
+  }
+}
