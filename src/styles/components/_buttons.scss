@@ -40,6 +40,13 @@
       background-color: $primaryLight;
       cursor: default;
     }
+
+    @media (max-width: $mdMax) {
+      &:hover {
+        color: $primaryLight;
+        background-color: transparent;
+      }
+    }
   }
 
   // Tamanhos
