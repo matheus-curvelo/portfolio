@@ -1,19 +1,17 @@
 import "../../node_modules/jquery/dist/jquery.min.js";
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
-import {ReactComponent as Lamp} from "../assets/svg/Lamp.svg";
 import {ReactComponent as Html} from "../assets/svg/Html.svg";
 import {ReactComponent as Css} from "../assets/svg/Css.svg";
 import {ReactComponent as Js} from "../assets/svg/Js.svg";
 import {ReactComponent as Bootstrap} from "../assets/svg/Bootstrap.svg";
-import {ReactComponent as Sass} from "../assets/svg/Sass.svg";
+import {ReactComponent as Node} from "../assets/svg/Node.svg";
 import {ReactComponent as React} from "../assets/svg/React.svg";
-import {ReactComponent as Git} from "../assets/svg/Git.svg";
+import {ReactComponent as Sass} from "../assets/svg/Sass.svg";
 import {ReactComponent as Github} from "../assets/svg/Github.svg";
-import {ReactComponent as Figma} from "../assets/svg/Figma.svg";
+import {ReactComponent as Lamp} from "../assets/svg/Lamp.svg";
 import {ReactComponent as Folder} from "../assets/svg/Folder.svg";
 import {ReactComponent as Users} from "../assets/svg/Users.svg";
-import {ReactComponent as MaterialUI} from "../assets/svg/MaterialUI.svg";
 
 import "../styles/main.scss";
 
@@ -115,9 +113,9 @@ function Skills() {
                 </span>
               </div>
 
-              <div className="developer-icon-wrapper" title="Sass">
+              <div className="developer-icon-wrapper" title="Node JS">
                 <span className="btn btn-dev">
-                  <Sass />
+                  <Node />
                 </span>
               </div>
 
@@ -127,27 +125,9 @@ function Skills() {
                 </span>
               </div>
 
-              <div className="developer-icon-wrapper" title="Git">
+              <div className="developer-icon-wrapper" title="Sass">
                 <span className="btn btn-dev">
-                  <Git />
-                </span>
-              </div>
-
-              <div className="developer-icon-wrapper" title="Github">
-                <span className="btn btn-dev">
-                  <Github />
-                </span>
-              </div>
-
-              <div className="developer-icon-wrapper" title="Figma">
-                <span className="btn btn-dev">
-                  <Figma />
-                </span>
-              </div>
-
-              <div className="developer-icon-wrapper" title="Materia UI">
-                <span className="btn btn-dev">
-                  <MaterialUI />
+                  <Sass />
                 </span>
               </div>
             </div>
