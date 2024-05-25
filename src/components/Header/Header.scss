@@ -1,0 +1,24 @@
+#header {
+    padding: 2.5%;
+
+    .header__box {
+        display: flex;
+        gap: 1.5rem;
+
+        .header__link {
+            text-decoration: none;
+            color: inherit;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+          
+            &:hover {
+              color: #6c5ce7;
+            }
+          
+          &.active {
+            border-bottom: 2px solid #6c5ce7;
+          }
+        }
+
+    }
+}
