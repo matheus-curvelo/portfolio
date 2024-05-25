@@ -32,7 +32,11 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
     <AppBar
       id="header"
       position="fixed"
-      sx={{ backgroundColor: theme.palette.background.default }}
+      sx={{
+        backgroundColor: 'background.default',
+        borderBottom: 2,
+        borderColor: 'secondary.contrastText',
+      }}
     >
       <Toolbar>
         <Container maxWidth="xl">

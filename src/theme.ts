@@ -36,11 +36,12 @@ const baseTypography = {
 
 const lightTheme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
       main: "#6c5ce7",
       light: "#9d88ff",
       dark: "#4d3cb9",
-      contrastText: "#f5f5f5",
+      contrastText: "#050816",
     },
     secondary: {
       main: "#ced4da",
@@ -57,6 +58,7 @@ const lightTheme = createTheme({
 
 const darkTheme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
       main: "#6c5ce7",
       light: "#9d88ff",
@@ -67,7 +69,7 @@ const darkTheme = createTheme({
       main: "#ced4da",
       light: "#eff2f7",
       dark: "#8d97a5",
-      contrastText: "#050816",
+      contrastText: "#f5f5f5",
     },
     background: {
       default: '#050816',
