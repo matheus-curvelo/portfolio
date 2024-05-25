@@ -5,7 +5,6 @@ import {
   Container,
   Box,
   IconButton,
-  Switch,
   Typography,
   useTheme,
 } from "@mui/material";
@@ -19,6 +18,8 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 import "animate.css";
+
+import ThemeSwitch from '../../components/ThemeSwitch'; // Import the new component
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -125,7 +126,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
               >
                 <FontAwesomeIcon icon={faWhatsapp} />
               </IconButton>
-              <Switch checked={isDarkTheme} onChange={toggleTheme} />
+              <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
             </div>
           </Box>
         </Container>
