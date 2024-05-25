@@ -1,39 +1,111 @@
 // Header.tsx
-import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@mui/material';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { AppBar, Toolbar, Box, IconButton } from "@mui/material";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faLinkedin,
+  faWhatsapp,
+  faFacebook,
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
-import 'animate.css';
+import "animate.css";
 
 const Header: React.FC = () => {
   return (
-    <AppBar id="header" color='transparent' position="static">
+    <AppBar id="header" color="transparent" position="static">
       <Toolbar>
         <Box className="header__box">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => isActive ? "header__link active" : "header__link"}
-          >
-            Home
-          </NavLink>
-          <NavLink 
-            to="/sobre" 
-            className={({ isActive }) => isActive ? "header__link active" : "header__link"}
-          >
-            Sobre
-          </NavLink>
-          <NavLink 
-            to="/projetos" 
-            className={({ isActive }) => isActive ? "header__link active" : "header__link"}
-          >
-            Projetos
-          </NavLink>
-          <NavLink 
-            to="/contato" 
-            className={({ isActive }) => isActive ? "header__link active" : "header__link"}
-          >
-            Contato
-          </NavLink>
+          <div className="header__links animate__animated animate__backInLeft">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "header__link active" : "header__link"
+              }>
+              Home
+            </NavLink>
+            <NavLink
+              to="/sobre"
+              className={({ isActive }) =>
+                isActive ? "header__link active" : "header__link"
+              }>
+              Sobre
+            </NavLink>
+            <NavLink
+              to="/projetos"
+              className={({ isActive }) =>
+                isActive ? "header__link active" : "header__link"
+              }>
+              Projetos
+            </NavLink>
+            <NavLink
+              to="/contato"
+              className={({ isActive }) =>
+                isActive ? "header__link active" : "header__link"
+              }>
+              Contato
+            </NavLink>
+          </div>
+
+          <div className="header__icons animate__animated animate__backInRight">
+            <IconButton
+              component="a"
+              href="https://www.linkedin.com/in/matheus-curvelo"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit"
+              className="header__icon">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="https://github.com/matheus-curvelo"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit"
+              className="header__icon">
+              <FontAwesomeIcon icon={faGithub} />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="https://www.facebook.com/matheus.curvelo1994"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit"
+              className="header__icon">
+              <FontAwesomeIcon icon={faFacebook} />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="https://www.instagram.com/matheus.curvelo"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit"
+              className="header__icon">
+              <FontAwesomeIcon icon={faInstagram} />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="mailto:matheuscurvelo@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit"
+              className="header__icon">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </IconButton>
+            <IconButton
+              component="a"
+              href="https://wa.me/5511982382008"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit"
+              className="header__icon">
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </IconButton>
+          </div>
         </Box>
       </Toolbar>
     </AppBar>
