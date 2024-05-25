@@ -1,8 +1,9 @@
 @import '../../styles/variables.scss';
 
 #header {
-    padding: 2.5%;
     overflow: hidden;
+    background-color: $dark;
+    border-bottom: 2px solid $secondary;
 
     .header__box {
         display: flex;
@@ -21,13 +22,19 @@
             .header__link {
                 text-decoration: none;
                 color: $primary;
+                transition: scale 0.3s ease-in-out, border-color 0.3s ease-in-out, border-bottom 0.1s ease-in-out, color 0.3s ease-in-out;
+                font-size: 1.25rem;
 
                 &:hover {
-                    color: $primaryDark;
+                    color: $primaryLight;
+                    border-bottom: 2px solid $primaryLight;
+                    scale: calc(1 + .05);
+
                 }
 
                 &.active {
-                    border-bottom: 2px solid $primary;
+                    color: $secondary;
+                    border-bottom: 2px solid $secondary;
                 }
             }
         }
@@ -40,7 +47,7 @@
                     color: $primary;
 
                     &:hover {
-                        color: $primaryDark;
+                        color: $primaryLight;
                     }
                 }
             }

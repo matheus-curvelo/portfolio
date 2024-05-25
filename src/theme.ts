@@ -14,7 +14,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Dosis, Roboto, sans-serif', // Adicione 'Dosis' aqui
+    fontFamily: 'Dosis, Roboto, sans-serif',
     h1: {
       fontSize: '2.5rem',
       '@media (max-width:900px)': {
