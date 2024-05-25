@@ -5,20 +5,25 @@ import {
   Container,
   Box,
   IconButton,
+  Switch,
 } from "@mui/material";
-import {NavLink} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faWhatsapp,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 import "animate.css";
 
+interface HeaderProps {
+  toggleTheme: () => void;
+  isDarkTheme: boolean;
+}
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
   return (
     <AppBar id="header" position="fixed">
       <Toolbar>
@@ -27,30 +32,34 @@ const Header: React.FC = () => {
             <div className="header__links animate__animated animate__backInLeft">
               <NavLink
                 to="/"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
-                }>
+                }
+              >
                 Home
               </NavLink>
               <NavLink
                 to="/sobre"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
-                }>
+                }
+              >
                 Sobre
               </NavLink>
               <NavLink
                 to="/projetos"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
-                }>
+                }
+              >
                 Projetos
               </NavLink>
               <NavLink
                 to="/contato"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
-                }>
+                }
+              >
                 Contato
               </NavLink>
             </div>
@@ -62,7 +71,8 @@ const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
-                className="header__icon">
+                className="header__icon"
+              >
                 <FontAwesomeIcon icon={faLinkedin} />
               </IconButton>
               <IconButton
@@ -71,7 +81,8 @@ const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
-                className="header__icon">
+                className="header__icon"
+              >
                 <FontAwesomeIcon icon={faGithub} />
               </IconButton>
               <IconButton
@@ -80,7 +91,8 @@ const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
-                className="header__icon">
+                className="header__icon"
+              >
                 <FontAwesomeIcon icon={faEnvelope} />
               </IconButton>
               <IconButton
@@ -89,9 +101,11 @@ const Header: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
-                className="header__icon">
+                className="header__icon"
+              >
                 <FontAwesomeIcon icon={faWhatsapp} />
               </IconButton>
+              <Switch checked={isDarkTheme} onChange={toggleTheme} />
             </div>
           </Box>
         </Container>

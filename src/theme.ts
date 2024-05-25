@@ -1,7 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+const lightTheme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
       main: '#6c5ce7',
       dark: '#4d3cb9',
@@ -12,52 +13,35 @@ const theme = createTheme({
       dark: '#8d97a5',
       light: '#eff2f7',
     },
+    background: {
+      default: '#ffffff',
+    },
   },
   typography: {
-    fontFamily: 'Dosis, Roboto, sans-serif',
-    h1: {
-      fontSize: '2.5rem',
-      '@media (max-width:900px)': {
-        fontSize: '2rem',
-      },
-    },
-    h2: {
-      fontSize: '2rem',
-      '@media (max-width:900px)': {
-        fontSize: '1.5rem',
-      },
-    },
-    h3: {
-      fontSize: '1.75rem',
-      '@media (max-width:900px)': {
-        fontSize: '1.25rem',
-      },
-    },
-    h4: {
-      fontSize: '1.5rem',
-      '@media (max-width:900px)': {
-        fontSize: '1rem',
-      },
-    },
-    h5: {
-      fontSize: '1.25rem',
-      '@media (max-width:900px)': {
-        fontSize: '0.75rem',
-      },
-    },
-    h6: {
-      fontSize: '1rem',
-      '@media (max-width:900px)': {
-        fontSize: '0.5rem',
-      },
-    },
-    body1: {
-      fontSize: '1rem',
-      '@media (max-width:900px)': {
-        fontSize: '0.875rem',
-      },
-    },
+    fontFamily: 'Roboto, sans-serif',
   },
 });
 
-export default theme;
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#6c5ce7',
+      dark: '#4d3cb9',
+      light: '#9d88ff',
+    },
+    secondary: {
+      main: '#ced4da',
+      dark: '#8d97a5',
+      light: '#eff2f7',
+    },
+    background: {
+      default: '#121212',
+    },
+  },
+  typography: {
+    fontFamily: 'Roboto, sans-serif',
+  },
+});
+
+export { lightTheme, darkTheme };
