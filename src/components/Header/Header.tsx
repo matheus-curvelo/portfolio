@@ -1,16 +1,13 @@
-// Header.tsx
 import React from "react";
-import { AppBar, Toolbar, Box, IconButton } from "@mui/material";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {AppBar, Toolbar, Box, IconButton, Typography} from "@mui/material";
+import {NavLink} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
-  faInstagram,
   faLinkedin,
   faWhatsapp,
-  faFacebook,
-  faGithub
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 import "animate.css";
 
@@ -22,31 +19,31 @@ const Header: React.FC = () => {
           <div className="header__links animate__animated animate__backInLeft">
             <NavLink
               to="/"
-              className={({ isActive }) =>
+              className={({isActive}) =>
                 isActive ? "header__link active" : "header__link"
               }>
-              Home
+              <Typography variant="h5">Home</Typography>
             </NavLink>
             <NavLink
               to="/sobre"
-              className={({ isActive }) =>
+              className={({isActive}) =>
                 isActive ? "header__link active" : "header__link"
               }>
-              Sobre
+              <Typography variant="h5">Sobre</Typography>
             </NavLink>
             <NavLink
               to="/projetos"
-              className={({ isActive }) =>
+              className={({isActive}) =>
                 isActive ? "header__link active" : "header__link"
               }>
-              Projetos
+              <Typography variant="h5">Projetos</Typography>
             </NavLink>
             <NavLink
               to="/contato"
-              className={({ isActive }) =>
+              className={({isActive}) =>
                 isActive ? "header__link active" : "header__link"
               }>
-              Contato
+              <Typography variant="h5">Contato</Typography>
             </NavLink>
           </div>
 
@@ -68,24 +65,6 @@ const Header: React.FC = () => {
               color="inherit"
               className="header__icon">
               <FontAwesomeIcon icon={faGithub} />
-            </IconButton>
-            <IconButton
-              component="a"
-              href="https://www.facebook.com/matheus.curvelo1994"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-              className="header__icon">
-              <FontAwesomeIcon icon={faFacebook} />
-            </IconButton>
-            <IconButton
-              component="a"
-              href="https://www.instagram.com/matheus.curvelo"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit"
-              className="header__icon">
-              <FontAwesomeIcon icon={faInstagram} />
             </IconButton>
             <IconButton
               component="a"
