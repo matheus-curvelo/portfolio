@@ -6,8 +6,13 @@ $white_2: #fefefe;
 $black: #000000;
 $black_2: #212529;
 
-$red: #6c5ce7 ;
-$silver: #ced4da ;
+$purpleLight: #9d88ff;
+$purple: #6c5ce7;
+$purpleDark: #4d3cb9;
+
+$silverLight: #eff2f7;
+$silver: #ced4da;
+$silverDark: #8d97a5;
 
 // Contextos
 
@@ -17,7 +22,7 @@ $light_2: $white_2;
 $dark:  $black;
 $dark_2: $black_2;
 
-$primary: $red;
+$primary: $purple;
 $secondary: $silver;
 
 // Breakpoints
