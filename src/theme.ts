@@ -36,21 +36,24 @@ const baseTypography = {
 
 const lightTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode: "light",
     primary: {
-      main: "#6c5ce7",
-      light: "#9d88ff",
-      dark: "#4d3cb9",
-      contrastText: "#000000",
+      main: "#6C5CE7",
+      light: "#9D88FF",
+      dark: "#4D3CB9",
+      contrastText: "#fefefe",
     },
     secondary: {
-      main: "#ced4da",
-      light: "#eff2f7",
-      dark: "#8d97a5",
-      contrastText: "#000000",
+      main: "#4CCD99",
+      light: "#72E1B5",
+      dark: "#32916E",
+      contrastText: "#0C0C0C",
     },
     background: {
-      default: '#faf7e9',
+      default: "#F1F1F1",
+    },
+    text: {
+      primary: "#0C0C0C",
     },
   },
   typography: baseTypography,
@@ -58,21 +61,24 @@ const lightTheme = createTheme({
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: "#6c5ce7",
-      light: "#9d88ff",
-      dark: "#4d3cb9",
-      contrastText: "#faf7e9",
+      main: "#6C5CE7",
+      light: "#9D88FF",
+      dark: "#4D3CB9",
+      contrastText: "#0C0C0C",
     },
     secondary: {
-      main: "#ced4da",
-      light: "#eff2f7",
-      dark: "#8d97a5",
-      contrastText: "#faf7e9",
+      main: "#4CCD99",
+      light: "#72E1B5",
+      dark: "#32916E",
+      contrastText: "#0C0C0C",
     },
     background: {
-      default: '#050816',
+      default: "#0C0C0C",
+    },
+    text: {
+      primary: "#F1F1F1",
     },
   },
   typography: baseTypography,

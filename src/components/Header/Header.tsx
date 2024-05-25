@@ -6,27 +6,28 @@ import {
   Box,
   IconButton,
   Typography,
-  useTheme,
 } from "@mui/material";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {NavLink} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faWhatsapp,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 import "animate.css";
+import { useTheme } from '@mui/material/styles';
 
-import ThemeSwitch from '../../components/ThemeSwitch'; // Import the new component
+import ThemeSwitch from "../../components/ThemeSwitch"; // Import the new component
 
 interface HeaderProps {
   toggleTheme: () => void;
   isDarkTheme: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
+const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
+
   const theme = useTheme();
 
   return (
@@ -34,52 +35,47 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
       id="header"
       position="fixed"
       sx={{
-        backgroundColor: 'background.default',
+        backgroundColor: "background.default",
         borderBottom: 2,
-        borderColor: 'secondary.contrastText',
-      }}
-    >
+        borderColor: "primary.main"
+      }}>
       <Toolbar>
         <Container maxWidth="xl">
           <Box className="header__box">
             <div className="header__links animate__animated animate__backInLeft">
               <NavLink
                 to="/"
-                className={({ isActive }) =>
+                className={({isActive}) =>
                   isActive ? "header__link active" : "header__link"
-                }
-              >
-                <Typography color="primary" variant="h6">
+                }>
+                <Typography color={theme.palette.text.primary} variant="h6">
                   Home
                 </Typography>
               </NavLink>
               <NavLink
                 to="/sobre"
-                className={({ isActive }) =>
+                className={({isActive}) =>
                   isActive ? "header__link active" : "header__link"
-                }
-              >
-                <Typography color="primary" variant="h6">
+                }>
+                <Typography color={theme.palette.text.primary} variant="h6">
                   Sobre
                 </Typography>
               </NavLink>
               <NavLink
                 to="/projetos"
-                className={({ isActive }) =>
+                className={({isActive}) =>
                   isActive ? "header__link active" : "header__link"
-                }
-              >
-                <Typography color="primary" variant="h6">
+                }>
+                <Typography color={theme.palette.text.primary} variant="h6">
                   Projetos
                 </Typography>
               </NavLink>
               <NavLink
                 to="/contato"
-                className={({ isActive }) =>
+                className={({isActive}) =>
                   isActive ? "header__link active" : "header__link"
-                }
-              >
-                <Typography color="primary" variant="h6">
+                }>
+                <Typography color={theme.palette.text.primary} variant="h6">
                   Contato
                 </Typography>
               </NavLink>
@@ -92,8 +88,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="primary"
-                className="header__icon"
-              >
+                className="header__icon">
                 <FontAwesomeIcon icon={faLinkedin} />
               </IconButton>
               <IconButton
@@ -102,8 +97,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="primary"
-                className="header__icon"
-              >
+                className="header__icon">
                 <FontAwesomeIcon icon={faGithub} />
               </IconButton>
               <IconButton
@@ -112,8 +106,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="primary"
-                className="header__icon"
-              >
+                className="header__icon">
                 <FontAwesomeIcon icon={faEnvelope} />
               </IconButton>
               <IconButton
@@ -122,11 +115,13 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 color="primary"
-                className="header__icon"
-              >
+                className="header__icon">
                 <FontAwesomeIcon icon={faWhatsapp} />
               </IconButton>
-              <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+              <ThemeSwitch
+                toggleTheme={toggleTheme}
+                isDarkTheme={isDarkTheme}
+              />
             </div>
           </Box>
         </Container>

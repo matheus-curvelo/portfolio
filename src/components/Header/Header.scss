@@ -2,6 +2,7 @@
 
 #header {
     overflow: hidden;
+    background-image: none;
 
     .header__box {
         display: flex;
@@ -28,7 +29,7 @@
                 }
 
                 &.active {
-                    border-bottom: 2px solid $primary;
+                    border-bottom: 2px solid red;
                 }
             }
         }
