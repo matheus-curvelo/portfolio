@@ -1,11 +1,19 @@
 import React from 'react';
+import "./Projects.scss";
+import {Box, Container, Typography} from "@mui/material";
 
 const Projects: React.FC = () => {
   return (
-    <div>
-      <h1>Projects</h1>
-      <p>Bem-vindo ao meu portfólio!</p>
-    </div>
+    <Box
+      id="projects"
+      className="content-page"
+      component="section"
+      py={8}
+      bgcolor="dark">
+      <Container maxWidth="xl">
+        <Typography variant="h1">Projects</Typography>
+      </Container>
+    </Box>
   );
 };
 
