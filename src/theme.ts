@@ -1,47 +1,79 @@
-import { createTheme } from '@mui/material/styles';
+import {createTheme} from "@mui/material/styles";
+
+const baseTypography = {
+  fontFamily: "Dosis, Roboto, sans-serif",
+  h1: {
+    fontSize: "2.5rem",
+    "@media (max-width:900px)": {
+      fontSize: "2rem",
+    },
+  },
+  h2: {
+    fontSize: "2rem",
+    "@media (max-width:900px)": {
+      fontSize: "1.5rem",
+    },
+  },
+  h3: {
+    fontSize: "1.75rem",
+    "@media (max-width:900px)": {
+      fontSize: "1.25rem",
+    },
+  },
+  h4: {
+    fontSize: "1.5rem",
+    "@media (max-width:900px)": {
+      fontSize: "1rem",
+    },
+  },
+  h5: {
+    fontSize: "1.25rem",
+    "@media (max-width:900px)": {
+      fontSize: "0.75rem",
+    },
+  },
+};
 
 const lightTheme = createTheme({
   palette: {
-    mode: 'light',
     primary: {
-      main: '#6c5ce7',
-      dark: '#4d3cb9',
-      light: '#9d88ff',
+      main: "#6c5ce7",
+      light: "#9d88ff",
+      dark: "#4d3cb9",
+      contrastText: "#f5f5f5",
     },
     secondary: {
-      main: '#ced4da',
-      dark: '#8d97a5',
-      light: '#eff2f7',
+      main: "#ced4da",
+      light: "#eff2f7",
+      dark: "#8d97a5",
+      contrastText: "#050816",
     },
     background: {
-      default: '#ffffff',
+      default: '#f5f5f5',
     },
   },
-  typography: {
-    fontFamily: 'Roboto, sans-serif',
-  },
+  typography: baseTypography,
 });
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
     primary: {
-      main: '#6c5ce7',
-      dark: '#4d3cb9',
-      light: '#9d88ff',
+      main: "#6c5ce7",
+      light: "#9d88ff",
+      dark: "#4d3cb9",
+      contrastText: "#f5f5f5",
     },
     secondary: {
-      main: '#ced4da',
-      dark: '#8d97a5',
-      light: '#eff2f7',
+      main: "#ced4da",
+      light: "#eff2f7",
+      dark: "#8d97a5",
+      contrastText: "#050816",
     },
     background: {
-      default: '#121212',
+      default: '#050816',
     },
   },
-  typography: {
-    fontFamily: 'Roboto, sans-serif',
-  },
+  typography: baseTypography,
 });
 
-export { lightTheme, darkTheme };
+export {lightTheme, darkTheme};

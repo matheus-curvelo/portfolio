@@ -6,6 +6,8 @@ import {
   Box,
   IconButton,
   Switch,
+  Typography,
+  useTheme,
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,8 +26,14 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
+  const theme = useTheme();
+
   return (
-    <AppBar id="header" position="fixed">
+    <AppBar
+      id="header"
+      position="fixed"
+      sx={{ backgroundColor: theme.palette.background.default }}
+    >
       <Toolbar>
         <Container maxWidth="xl">
           <Box className="header__box">
@@ -36,7 +44,9 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                   isActive ? "header__link active" : "header__link"
                 }
               >
-                Home
+                <Typography color="primary" variant="h6">
+                  Home
+                </Typography>
               </NavLink>
               <NavLink
                 to="/sobre"
@@ -44,7 +54,9 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                   isActive ? "header__link active" : "header__link"
                 }
               >
-                Sobre
+                <Typography color="primary" variant="h6">
+                  Sobre
+                </Typography>
               </NavLink>
               <NavLink
                 to="/projetos"
@@ -52,7 +64,9 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                   isActive ? "header__link active" : "header__link"
                 }
               >
-                Projetos
+                <Typography color="primary" variant="h6">
+                  Projetos
+                </Typography>
               </NavLink>
               <NavLink
                 to="/contato"
@@ -60,7 +74,9 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                   isActive ? "header__link active" : "header__link"
                 }
               >
-                Contato
+                <Typography color="primary" variant="h6">
+                  Contato
+                </Typography>
               </NavLink>
             </div>
 
@@ -70,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 href="https://www.linkedin.com/in/matheus-curvelo"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
+                color="primary"
                 className="header__icon"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
@@ -80,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 href="https://github.com/matheus-curvelo"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
+                color="primary"
                 className="header__icon"
               >
                 <FontAwesomeIcon icon={faGithub} />
@@ -90,7 +106,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 href="mailto:matheuscurvelo@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
+                color="primary"
                 className="header__icon"
               >
                 <FontAwesomeIcon icon={faEnvelope} />
@@ -100,7 +116,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
                 href="https://wa.me/5511982382008"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit"
+                color="primary"
                 className="header__icon"
               >
                 <FontAwesomeIcon icon={faWhatsapp} />

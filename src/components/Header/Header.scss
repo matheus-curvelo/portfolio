@@ -2,8 +2,7 @@
 
 #header {
     overflow: hidden;
-    background-color: $dark;
-    border-bottom: 2px solid $secondary;
+    border-bottom: 2px solid $light_2;
 
     .header__box {
         display: flex;
@@ -14,6 +13,7 @@
         .header__links,
         .header__icons {
             display: flex;
+            align-items: center;
             gap: 3rem;
             animation-duration: 2.5s;
         }
@@ -21,20 +21,15 @@
         .header__links {
             .header__link {
                 text-decoration: none;
-                color: $primary;
-                transition: scale 0.3s ease-in-out, border-color 0.3s ease-in-out, border-bottom 0.1s ease-in-out, color 0.3s ease-in-out;
                 font-size: 1.25rem;
+                transition: scale 0.3s ease-in-out;
 
                 &:hover {
-                    color: $primaryLight;
-                    border-bottom: 2px solid $primaryLight;
-                    scale: calc(1 + .05);
-
+                    scale: calc(1 + .1);
                 }
 
                 &.active {
-                    color: $secondary;
-                    border-bottom: 2px solid $secondary;
+                    border-bottom: 2px solid $primary;
                 }
             }
         }
@@ -42,13 +37,10 @@
         .header__icons {
             .header__icon {
                 padding: 0;
+                transition: scale 0.3s ease-in-out;
 
-                svg {
-                    color: $primary;
-
-                    &:hover {
-                        color: $primaryLight;
-                    }
+                &:hover {
+                    scale: calc(1 + .2);
                 }
             }
         }
