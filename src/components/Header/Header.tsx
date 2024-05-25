@@ -3,6 +3,7 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import "./Header.scss";
+import 'animate.css';
 
 const Header: React.FC = () => {
   return (
