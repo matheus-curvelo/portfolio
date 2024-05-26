@@ -7,27 +7,26 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import {NavLink} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faWhatsapp,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 import "animate.css";
 import { useTheme } from '@mui/material/styles';
 
-import ThemeSwitch from "../../components/ThemeSwitch"; // Import the new component
+import ThemeSwitch from "../../components/ThemeSwitch";
 
 interface HeaderProps {
   toggleTheme: () => void;
   isDarkTheme: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
-
+const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
   const theme = useTheme();
 
   return (
@@ -45,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
             <div className="header__links animate__animated animate__backInLeft">
               <NavLink
                 to="/"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
                 }>
                 <Typography color={theme.palette.text.primary} variant="h6">
@@ -54,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
               </NavLink>
               <NavLink
                 to="/sobre"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
                 }>
                 <Typography color={theme.palette.text.primary} variant="h6">
@@ -63,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
               </NavLink>
               <NavLink
                 to="/projetos"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
                 }>
                 <Typography color={theme.palette.text.primary} variant="h6">
@@ -72,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
               </NavLink>
               <NavLink
                 to="/contato"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   isActive ? "header__link active" : "header__link"
                 }>
                 <Typography color={theme.palette.text.primary} variant="h6">
