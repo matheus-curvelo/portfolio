@@ -3,6 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
+import "./NavLinkItem.scss";
 
 interface NavLinkItemProps {
   to: string;
@@ -18,7 +19,8 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
         isActive ? "header__link active" : "header__link"
       }
     >
-      <Typography color={theme.palette.text.primary} variant="h6">
+      <Typography 
+      color={theme.palette.text.primary} variant="h6">
         {label}
       </Typography>
     </NavLink>

@@ -23,12 +23,12 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
     <AppBar
       id="header"
       position="fixed"
+      color="inherit"
       sx={{
-        backgroundColor: "background.default",
+        // backgroundColor: "background.default",
         borderBottom: 2,
         borderColor: "primary.main"
       }}>
-      <Toolbar>
         <Container maxWidth="xl">
           <Box className="header__box">
             <Box className="header__links animate__animated animate__backInLeft">
@@ -49,7 +49,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
             </Box>
           </Box>
         </Container>
-      </Toolbar>
     </AppBar>
   );
 };
