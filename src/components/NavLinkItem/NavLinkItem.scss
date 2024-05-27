@@ -1,0 +1,13 @@
+.header__link {
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: scale 0.3s ease-in-out;
+
+    &:hover {
+        scale: calc(1 + .1);
+    }
+
+    &.active {
+        border-bottom: 2px solid red;
+    }
+}

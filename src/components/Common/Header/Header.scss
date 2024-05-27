@@ -1,0 +1,19 @@
+#header {
+    overflow: hidden;
+    background-image: none;
+
+    .header__box {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        width: 100%;
+
+        .header__links,
+        .header__icons {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            animation-duration: 2.5s;
+        }
+    }
+}

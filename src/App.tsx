@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import Header from './components/Header';
+import Header from './components/Common/Header';
 import Home from './pages/Home';
 import Sobre from './pages/About';
 import Projetos from './pages/Projects';
