@@ -10,10 +10,18 @@ import { lightTheme, darkTheme } from './theme';
 import './App.scss';
 
 function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  // Verifica o localStorage para ver se o tema escuro está ativado
+  const [isDarkTheme, setIsDarkTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('isDarkTheme');
+    return savedTheme ? JSON.parse(savedTheme) : false;
+  });
 
   const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
+    setIsDarkTheme((prevTheme: boolean) => {
+      const newTheme = !prevTheme;
+      localStorage.setItem('isDarkTheme', JSON.stringify(newTheme));
+      return newTheme;
+    });
   };
 
   const theme = useMemo(() => (isDarkTheme ? darkTheme : lightTheme), [isDarkTheme]);
