@@ -6,7 +6,6 @@ const Home: React.FC = () => {
   return (
     <Box
       id="home"
-      className="content-page"
       component="section"
       py={8}
     >
