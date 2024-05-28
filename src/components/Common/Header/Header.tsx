@@ -35,34 +35,48 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
   };
 
   const menuItems = (
-    <List>
-      <ListItem button component={NavLinkItem} to="/" label="Home" />
-      <ListItem button component={NavLinkItem} to="/sobre" label="Sobre" />
-      <ListItem
-        button
-        component={NavLinkItem}
-        to="/projetos"
-        label="Projetos"
-      />
-      <ListItem button component={NavLinkItem} to="/contato" label="Contato" />
-      <ListItem>
-        <IconButtonItem
-          href="https://www.linkedin.com/in/matheus-curvelo"
-          icon={faLinkedin}
+    <List id="drawer">
+      <Box className="drawer__links" component="div">
+        <ListItem button component={NavLinkItem} to="/" label="Home" />
+        <ListItem button component={NavLinkItem} to="/sobre" label="Sobre" />
+        <ListItem
+          button
+          component={NavLinkItem}
+          to="/projetos"
+          label="Projetos"
         />
-        <IconButtonItem
-          href="https://github.com/matheus-curvelo"
-          icon={faGithub}
+        <ListItem
+          button
+          component={NavLinkItem}
+          to="/contato"
+          label="Contato"
         />
-        <IconButtonItem
-          href="mailto:matheuscurvelo@gmail.com"
-          icon={faEnvelope}
-        />
-        <IconButtonItem href="https://wa.me/5511982382008" icon={faWhatsapp} />
-      </ListItem>
-      <ListItem>
-        <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-      </ListItem>
+      </Box>
+      <Box className="drawer__icons" component="div">
+        <ListItem>
+          <IconButtonItem
+            href="https://www.linkedin.com/in/matheus-curvelo"
+            icon={faLinkedin}
+          />
+          <IconButtonItem
+            href="https://github.com/matheus-curvelo"
+            icon={faGithub}
+          />
+          <IconButtonItem
+            href="mailto:matheuscurvelo@gmail.com"
+            icon={faEnvelope}
+          />
+          <IconButtonItem
+            href="https://wa.me/5511982382008"
+            icon={faWhatsapp}
+          />
+        </ListItem>
+      </Box>
+      <Box className="drawer__theme_switch" component="div">
+        <ListItem>
+          <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+        </ListItem>
+      </Box>
     </List>
   );
 

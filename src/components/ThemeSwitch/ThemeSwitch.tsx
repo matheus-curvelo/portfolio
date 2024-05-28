@@ -1,7 +1,6 @@
-// ThemeSwitch.tsx
-
 import React from "react";
 import "./ThemeSwitch.scss";
+import { Box } from "@mui/material";
 
 interface ThemeSwitchProps {
   toggleTheme: () => void;
@@ -13,7 +12,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
   isDarkTheme,
 }) => {
   return (
-    <div className="theme-switch">
+    <Box className="theme-switch">
       <input
         type="checkbox"
         id="theme-checkbox"
@@ -42,7 +41,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
           </svg>
         </span>
       </label>
-    </div>
+    </Box>
   );
 };
 

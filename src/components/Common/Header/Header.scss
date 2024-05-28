@@ -20,3 +20,37 @@
         }
     }
 }
+
+// Customização do drawer
+
+#drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    // .drawer__links {
+    // }
+
+    .drawer__icons {
+        li {
+            display: flex;
+            gap: 10px;
+            padding: 0;
+
+            // @media (max-width: 400px) {
+            // }
+
+            a {
+                padding: 0;
+            }
+        }
+    }
+
+    .drawer__theme_switch {
+        li {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

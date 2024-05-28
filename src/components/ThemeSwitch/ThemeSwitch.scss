@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 $color_light: #FDFF00;
 $color_dark: #590696;
 $bg_light: #F1F1F1;
@@ -8,6 +10,10 @@ $bg_dark: #0C0C0C;
 	display: flex;
 	justify-content: center;
 	direction: rtl;
+
+	@media (max-width: $md) {
+		scale: .8;
+	}
 }
 
 #theme-checkbox {
