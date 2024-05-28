@@ -1,13 +1,15 @@
 #header {
     overflow: hidden;
-    background-image: none;
+    background-image: inherit;
 
     .header__box {
-        display: flex;
         justify-content: space-between;
         gap: 1.5rem;
         width: 100%;
-        padding: 1rem 0;
+
+        @media (max-width: 900px) {
+
+        }
 
         .header__links,
         .header__icons {
@@ -17,4 +19,9 @@
             animation-duration: 2.5s;
         }
     }
+}
+
+
+.toolbar-area {
+    padding: 0 !important;
 }
