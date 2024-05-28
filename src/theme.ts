@@ -1,40 +1,36 @@
-import {createTheme} from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 const baseTypography = {
   fontFamily: "Dosis, Roboto, sans-serif",
   h1: {
     fontSize: "2.5rem",
-    "@media (max-width:900px)": {
-      fontSize: "2rem",
-    },
   },
   h2: {
     fontSize: "2rem",
-    "@media (max-width:900px)": {
-      fontSize: "1.5rem",
-    },
   },
   h3: {
     fontSize: "1.75rem",
-    "@media (max-width:900px)": {
-      fontSize: "1.25rem",
-    },
   },
   h4: {
     fontSize: "1.5rem",
-    "@media (max-width:900px)": {
-      fontSize: "1rem",
-    },
   },
   h5: {
     fontSize: "1.25rem",
-    "@media (max-width:900px)": {
-      fontSize: "0.75rem",
-    },
+  },
+};
+
+const breakpoints = {
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 900,
+    lg: 1200,
+    xl: 1536,
   },
 };
 
 const lightTheme = createTheme({
+  breakpoints: breakpoints,
   palette: {
     mode: "light",
     primary: {
@@ -60,6 +56,7 @@ const lightTheme = createTheme({
 });
 
 const darkTheme = createTheme({
+  breakpoints: breakpoints,
   palette: {
     mode: "dark",
     primary: {
@@ -84,4 +81,4 @@ const darkTheme = createTheme({
   typography: baseTypography,
 });
 
-export {lightTheme, darkTheme};
+export { lightTheme, darkTheme };
