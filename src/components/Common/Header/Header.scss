@@ -12,11 +12,11 @@
             display: flex;
             align-items: center;
             gap: 3rem;
-            animation-duration: 2s;
+            animation-duration: 1.5s;
         }
 
         .header__icons {
-            animation-delay: 1s; /* Define um atraso de 10 segundos */
+            animation-delay: .75s;
         }
     }
 }
