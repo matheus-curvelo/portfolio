@@ -7,10 +7,6 @@
         gap: 1.5rem;
         width: 100%;
 
-        @media (max-width: 900px) {
-
-        }
-
         .header__links,
         .header__icons {
             display: flex;
@@ -23,9 +19,4 @@
             animation-delay: 1s; /* Define um atraso de 10 segundos */
         }
     }
-}
-
-
-.toolbar-area {
-    padding: 0 !important;
 }

@@ -1,7 +1,8 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import Header from './components/Common/Header';
+import Footer from './components/Common/Footer';
 import Home from './pages/Home';
 import Sobre from './pages/About';
 import Projetos from './pages/Projects';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/projetos" element={<Projetos />} />
           <Route path="/contato" element={<Contato />} />
         </Routes>
+        <Footer />
       </Router>
     </ThemeProvider>
   );

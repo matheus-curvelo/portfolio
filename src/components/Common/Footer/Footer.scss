@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+#footer {
+    .footer__box {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        flex-direction: column-reverse;
+
+        @media (min-width: $sm) {
+            flex-direction: row;
+        }
+
+        p {
+            margin: .75rem 0;
+
+            @media (max-width: $sm) {
+                margin: .5rem 0;
+            }
+
+            .red {
+                color: red;
+            }
+        }
+    }
+}
