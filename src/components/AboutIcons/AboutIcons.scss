@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+.icons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 10px;
+        box-sizing: border-box;
+        gap: 5px;
+
+        @media (max-width: $md) {
+            flex: 0 1 calc(33.333% - 36px);
+        }
+
+        @media (max-width: $sm) {
+            flex: 0 1 calc(50% - 32px);
+        }
+
+        &:hover {
+            color: $primary;
+
+            .icon__svg {
+                transform: translateY(-5px);
+            }
+        }
+
+        .icon__svg {
+            transition: transform .3s ease-in-out;
+        }
+    }
+}
