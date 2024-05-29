@@ -4,14 +4,11 @@ import {Box, Container, Typography} from "@mui/material";
 
 const Projects: React.FC = () => {
   return (
-    <Box
-      id="projects"
-      className="content-page"
-      component="section"
-      py={8}
-      bgcolor="dark">
+    <Box id="projects" component="section" py={8}>
       <Container maxWidth="xl">
-        <Typography variant="h1">Projects</Typography>
+        <Box className="projects__box" component="div">
+          <Typography variant="h1">Projetos</Typography>
+        </Box>
       </Container>
     </Box>
   );

@@ -37,13 +37,13 @@ const lightTheme = createTheme({
       main: "#6C5CE7",
       light: "#9D88FF",
       dark: "#4D3CB9",
-      contrastText: "#fefefe",
+      contrastText: "#F1F1F1",
     },
     secondary: {
-      main: "#4CCD99",
-      light: "#72E1B5",
-      dark: "#32916E",
-      contrastText: "#0C0C0C",
+      main: "#E29A66",
+      light: "#F3C2A1",
+      dark: "#B57242",
+      contrastText: "#F1F1F1",
     },
     background: {
       default: "#F1F1F1",
