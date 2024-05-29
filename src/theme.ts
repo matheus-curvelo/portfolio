@@ -17,6 +17,13 @@ const baseTypography = {
   h5: {
     fontSize: "1.25rem",
   },
+  h6: {
+    fontSize: "1rem",
+  },
+  p: {
+    fontSize: "1rem",
+  }
+
 };
 
 const breakpoints = {

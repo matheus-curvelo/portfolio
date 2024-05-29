@@ -1,0 +1,71 @@
+@import './variables';
+
+body {
+    font-family: "Dosis", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: .5rem !important;
+}
+
+h1 {
+    font-size: 2.5rem; // Recomendado para o h1
+
+    @media (max-width: $md) {
+        font-size: 2rem; // Recomendado para o h1
+    }
+}
+
+h2 {
+    font-size: 2rem; // Recomendado para o h2
+
+    @media (max-width: $md) {
+        font-size: 1.5rem; // Recomendado para o h1
+    }
+}
+
+h3 {
+    font-size: 1.75rem; // Recomendado para o h3
+
+    @media (max-width: $md) {
+        font-size: 1.25rem; // Recomendado para o h1
+    }
+}
+
+h4 {
+    font-size: 1.5rem; // Recomendado para o h4
+
+    @media (max-width: $md) {
+        font-size: 1rem; // Recomendado para o h1
+    }
+}
+
+h5 {
+    font-size: 1.25rem; // Recomendado para o h5
+
+    @media (max-width: $md) {
+        font-size: 0.75rem; // Recomendado para o h1
+    }
+}
+
+h6 {
+    font-size: 1rem; // Recomendado para o h6
+
+    @media (max-width: $md) {
+        font-size: 0.5rem; // Recomendado para o h1
+    }
+}
+
+p {
+    font-size: 1rem; // Recomendado para o p
+
+    @media (max-width: $md) {
+        font-size: 0.5rem; // Recomendado para o p
+    }
+}

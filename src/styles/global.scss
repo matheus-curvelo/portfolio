@@ -12,3 +12,19 @@ body,
     display: flex;
     flex-direction: column;
 }
+
+.color_primary {
+    color: $primary;
+}
+
+.text_bold {
+    font-weight: 700;
+}
+
+.text_decoration_none {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

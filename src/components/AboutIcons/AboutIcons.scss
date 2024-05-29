@@ -2,9 +2,14 @@
 
 .icons {
     display: flex;
-    gap: 1.5rem;
+    gap: 36px;
     flex-wrap: wrap;
     max-width: 900px;
+    padding: 36px 0;
+
+    @media (max-width: $md) {
+        justify-content: space-between;
+    }
 
     .icon {
         display: flex;
@@ -12,7 +17,6 @@
         text-align: center;
         align-items: center;
         cursor: pointer;
-        margin: 10px;
         box-sizing: border-box;
         gap: 5px;
 
@@ -24,11 +28,14 @@
             flex: 0 1 calc(50% - 32px);
         }
 
-        &:hover {
-            color: $primary;
+        @media (min-width: $md) {
 
-            .icon__svg {
-                transform: translateY(-5px);
+            &:hover {
+                color: $primary;
+
+                .icon__svg {
+                    transform: translateY(-5px);
+                }
             }
         }
 
