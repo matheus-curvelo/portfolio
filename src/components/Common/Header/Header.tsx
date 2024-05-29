@@ -52,30 +52,32 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
           label="Contato"
         />
       </Box>
-      <Box className="drawer__icons" component="div">
-        <ListItem>
-          <IconButtonItem
-            href="https://www.linkedin.com/in/matheus-curvelo"
-            icon={faLinkedin}
-          />
-          <IconButtonItem
-            href="https://github.com/matheus-curvelo"
-            icon={faGithub}
-          />
-          <IconButtonItem
-            href="mailto:matheuscurvelo@gmail.com"
-            icon={faEnvelope}
-          />
-          <IconButtonItem
-            href="https://wa.me/5511982382008"
-            icon={faWhatsapp}
-          />
-        </ListItem>
-      </Box>
-      <Box className="drawer__theme_switch" component="div">
-        <ListItem>
-          <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-        </ListItem>
+      <Box className="bottom_box">
+        <Box className="drawer__icons" component="div">
+          <ListItem>
+            <IconButtonItem
+              href="https://www.linkedin.com/in/matheus-curvelo"
+              icon={faLinkedin}
+            />
+            <IconButtonItem
+              href="https://github.com/matheus-curvelo"
+              icon={faGithub}
+            />
+            <IconButtonItem
+              href="mailto:matheuscurvelo@gmail.com"
+              icon={faEnvelope}
+            />
+            <IconButtonItem
+              href="https://wa.me/5511982382008"
+              icon={faWhatsapp}
+            />
+          </ListItem>
+        </Box>
+        <Box className="drawer__theme_switch" component="div">
+          <ListItem>
+            <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+          </ListItem>
+        </Box>
       </Box>
     </List>
   );
