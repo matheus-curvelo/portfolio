@@ -94,12 +94,13 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
         }}>
         <Container maxWidth="xl">
           <Toolbar sx={{padding: "0 !important"}}>
+            <Box sx={{flexGrow: 1}} />{" "}
             <IconButton
-              edge="start"
+              edge="end"
               color="inherit"
               aria-label="menu"
               onClick={handleDrawerToggle}
-              sx={{display: {xs: "block", md: "none"}}}>
+              sx={{display: {xs: "flex", md: "none"}}}>
               <MenuIcon />
             </IconButton>
             <Box
@@ -137,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
           </Toolbar>
         </Container>
       </AppBar>
-      <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
+      <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
         {menuItems}
       </Drawer>
     </>
