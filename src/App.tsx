@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from "react";
+import React, {useState, useMemo, useEffect } from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {Box, CssBaseline, ThemeProvider} from "@mui/material";
 import Header from "./components/Common/Header";
@@ -28,6 +28,19 @@ const App: React.FC = () => {
     () => (isDarkTheme ? darkTheme : lightTheme),
     [isDarkTheme]
   );
+
+  useEffect(() => {
+    const root = document.getElementById("root");
+    if (root) {
+      if (isDarkTheme) {
+        root.classList.add("theme_dark");
+        root.classList.remove("theme_light");
+      } else {
+        root.classList.add("theme_light");
+        root.classList.remove("theme_dark");
+      }
+    }
+  }, [isDarkTheme]);
 
   const homeContent = {
     greeting: "Oi, eu sou o Matheus!",

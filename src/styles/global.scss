@@ -13,6 +13,26 @@ body,
     flex-direction: column;
 }
 
+// Estilos da barra de rolagem
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: $dark;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba($primary, 0.75);
+
+    &:hover {
+        background-color: rgba(green, 1);
+    }
+}
+
+// Outros Estilos
+
 .color_primary {
     color: $primary;
 }
