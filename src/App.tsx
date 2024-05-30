@@ -10,7 +10,7 @@ import Contato from "./pages/Contact";
 import {lightTheme, darkTheme} from "./theme";
 import "./App.scss";
 
-function App() {
+const App: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(() => {
     const savedTheme = localStorage.getItem("isDarkTheme");
     return savedTheme ? JSON.parse(savedTheme) : true; // Padrão para tema escuro (true)
@@ -34,6 +34,21 @@ function App() {
     introduction: "Bem-vindo ao meu portfólio!",
     description:
       "Sou <span class='emphasis'>desenvolvedor front-end</span> e futuro engenheiro de software, apaixonado por tecnologia. Com quase 3 anos de experiência em desenvolvimento web, busco desenvolver minhas habilidades como full stack e especializar-me em React. Estou aberto a oportunidades desafiadoras e colaborações inovadoras!",
+  };
+
+  const contactProps = {
+    contactTitle: "Contato",
+    talkToMeTitle: "Fale comigo",
+    contactInfoTitle: "Informações de Contato",
+    phone: "(11) 98238-2008",
+    email: "matheuscurvelo@gmail.com",
+    socialMediaTitle: "Redes Sociais",
+    socialMediaLinks: [
+      {name: "Facebook", url: "https://www.facebook.com/matheus.curvelo1994"},
+      {name: "Instagram", url: "https://www.instagram.com/matheus.curvelo"},
+      {name: "LinkedIn", url: "https://www.linkedin.com/in/matheus-curvelo/"},
+      {name: "GitHub", url: "https://github.com/matheus-curvelo"},
+    ],
   };
 
   return (
@@ -71,13 +86,13 @@ function App() {
               }
             />
             <Route path="/projetos" element={<Projetos />} />
-            <Route path="/contato" element={<Contato />} />
+            <Route path="/contato" element={<Contato {...contactProps} />} />
           </Routes>
         </Box>
         <Footer />
       </Router>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
