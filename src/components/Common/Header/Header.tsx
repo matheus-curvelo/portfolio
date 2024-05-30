@@ -105,13 +105,13 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
             <Box
               sx={{display: {xs: "none", md: "flex"}}}
               className="header__box">
-              <Box className="header__links animate__animated animate__backInLeft">
+              <Box className="header__links animate__animated animate__fadeInLeft">
                 <NavLinkItem to="/" label="Home" />
                 <NavLinkItem to="/sobre" label="Sobre" />
                 <NavLinkItem to="/projetos" label="Projetos" />
                 <NavLinkItem to="/contato" label="Contato" />
               </Box>
-              <Box className="header__icons animate__animated animate__backInRight">
+              <Box className="header__icons animate__animated animate__fadeInRight">
                 <IconButtonItem
                   href="https://www.linkedin.com/in/matheus-curvelo"
                   icon={faLinkedin}

@@ -5,11 +5,24 @@
     font-size: 1.25rem;
     transition: scale 0.3s ease-in-out;
 
-    &:hover {
-        scale: calc(1 + .1);
+    @media (min-width: $md) {
+
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid $secondary;
+        }
+
+        &.active {
+            border-bottom: 2px solid $primary;
+        }
     }
 
-    &.active {
-        border-bottom: 2px solid $primary;
+    @media (max-width: $md) {
+        &.active {
+            span {
+                border-bottom: 2px solid $primary;
+            }
+        }
     }
 }

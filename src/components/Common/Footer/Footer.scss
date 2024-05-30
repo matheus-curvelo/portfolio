@@ -1,11 +1,13 @@
 @import '../../../styles/variables.scss';
 
 #footer {
+
     .footer__box {
         display: flex;
         justify-content: space-between;
         text-align: center;
         flex-direction: column-reverse;
+        overflow: hidden;
 
         @media (min-width: $sm) {
             flex-direction: row;
@@ -21,6 +23,11 @@
             .red {
                 color: red;
             }
+        }
+
+        .animate__animated {
+            animation-duration: 2s;
+            animation-delay: .5s;
         }
     }
 }

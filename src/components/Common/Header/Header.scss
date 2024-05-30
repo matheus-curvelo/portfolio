@@ -14,6 +14,8 @@
             gap: 3rem;
             animation-duration: 2s;
         }
+
+
     }
 }
 
@@ -28,10 +30,8 @@
     justify-content: space-between;
 
     .drawer__links {
-        h6 {
-
-            font-size: 1.25rem;
-        }
+        display: flex;
+        flex-direction: column;
     }
 
     .bottom_box {
@@ -49,6 +49,10 @@
 
                 a {
                     padding: 0;
+
+                    // svg {
+                    //     height: 1.25em;
+                    // }
                 }
             }
         }

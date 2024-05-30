@@ -1,8 +1,7 @@
-
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Typography } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
+import {NavLink} from "react-router-dom";
+import {Box, Typography} from "@mui/material";
+import {useTheme} from "@mui/material/styles";
 import "./NavLinkItem.scss";
 
 interface NavLinkItemProps {
@@ -10,19 +9,17 @@ interface NavLinkItemProps {
   label: string;
 }
 
-const NavLinkItem: React.FC<NavLinkItemProps> = ({ to, label }) => {
+const NavLinkItem: React.FC<NavLinkItemProps> = ({to, label}) => {
   const theme = useTheme();
   return (
     <NavLink
       to={to}
-      className={({ isActive }) =>
+      className={({isActive}) =>
         isActive ? "header__link active" : "header__link"
-      }
-    >
-      <Typography 
-      color={theme.palette.text.primary} variant="h6">
+      }>
+      <Box color={theme.palette.text.primary} component="span">
         {label}
-      </Typography>
+      </Box>
     </NavLink>
   );
 };

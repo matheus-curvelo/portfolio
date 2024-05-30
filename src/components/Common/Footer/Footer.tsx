@@ -13,14 +13,22 @@ const Footer: React.FC = () => {
         borderColor: "primary.main",
       }}>
       <Container maxWidth="xl">
-        <Box
-          className="footer__box"
-          >
-          <Box component="p">
+        <Box className="footer__box">
+          <Box component="p" className="animate__animated animate__fadeInUp">
             &copy; {new Date().getFullYear()} Todos os direitos reservados.
           </Box>
-          <Box component="p">
-            Criado com <Box component="span" className="red">❤</Box> por <Link target="_blank" href="https://github.com/matheus-curvelo" rel="noreferrer">Matheus Curvelo</Link> 
+          <Box component="p" className="animate__animated animate__fadeInUp">
+            Criado com{" "}
+            <Box component="span" className="red">
+              ❤
+            </Box>{" "}
+            por{" "}
+            <Link
+              target="_blank"
+              href="https://github.com/matheus-curvelo"
+              rel="noreferrer">
+              Matheus Curvelo
+            </Link>
           </Box>
         </Box>
       </Container>
