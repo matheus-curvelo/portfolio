@@ -10,10 +10,7 @@ $bg_dark: #0C0C0C;
 	display: flex;
 	justify-content: center;
 	direction: rtl;
-
-	@media (max-width: $md) {
-		scale: .8;
-	}
+	scale: .8;
 }
 
 #theme-checkbox {
