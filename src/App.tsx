@@ -90,9 +90,9 @@ const App: React.FC = () => {
                     "• Desenvolvedor Web na Sites WP (2021 - Presente)",
                   ]}
                   projects={[
-                    "• O <a class='color_primary text_decoration_none' target='_blank' href='https://www.mam.org.br/'>site</a> do Museu de Arte Moderna de São Paulo: ",
-                    "• O <a class='color_primary text_decoration_none' target='_blank' href='https://eirich.com.br/'>site</a> brasileiro do Grupo Eirich, com matriz em Hardheim, Alemanha",
-                    "• O <a class='color_primary text_decoration_none' target='_blank' href='https://garotasdomotion.com/'>site</a> do Garotas do Motion",
+                    "• <a class='color_primary text_decoration_none' target='_blank' href='https://www.mam.org.br/'>Museu de Arte Moderna de São Paulo</a>",
+                    "• <a class='color_primary text_decoration_none' target='_blank' href='https://eirich.com.br/'>Grupo Eirich</a>",
+                    "• <a class='color_primary text_decoration_none' target='_blank' href='https://garotasdomotion.com/'>Garotas do Motion</a>",
                   ]}
                   philosophy="Acredito que a colaboração e a comunicação são fundamentais para o sucesso de qualquer projeto. Minha abordagem é centrada em escrever código limpo e eficiente, mantendo sempre o foco na entrega de valor ao cliente."
                 />

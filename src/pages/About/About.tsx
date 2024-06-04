@@ -51,7 +51,7 @@ const About: React.FC<AboutProps> = ({
             />
           ))}
 
-          <Typography variant="h4">Projetos Notáveis</Typography>
+          <Typography variant="h4">Ultimos Projetos</Typography>
           {projects.map((proj, index) => (
             <Typography
               key={index}
