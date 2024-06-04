@@ -1,4 +1,12 @@
 #contact {
     margin-top: 5%;
     margin-bottom: 5%;
+
+    .contact__box {
+
+        a,
+        button {
+            border-radius: 20px;
+        }
+    }
 }
