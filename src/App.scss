@@ -2,10 +2,10 @@
 
 .content-page {
     flex: 1;
-    padding-top: 66px;
+    padding-top: 4.125rem;
 
     @media (max-width: $sm) {
-        padding-top: 58px;
+        padding-top: 3.625rem;
     }
 
     section {
