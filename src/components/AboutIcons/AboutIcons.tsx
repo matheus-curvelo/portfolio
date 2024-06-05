@@ -19,6 +19,7 @@ import {ReactComponent as TypeScriptIcon} from "../../assets/svg/typescript.svg"
 import {ReactComponent as WordPressIcon} from "../../assets/svg/wordpress.svg";
 import {ReactComponent as DockerIcon} from "../../assets/svg/docker.svg";
 import {ReactComponent as AxiosIcon} from "../../assets/svg/axios.svg";
+import {ReactComponent as ExpressIcon} from "../../assets/svg/express.svg";
 
 const icons = [
   {component: HtmlIcon, name: "HTML"},
@@ -37,6 +38,7 @@ const icons = [
   {component: WordPressIcon, name: "WordPress"},
   {component: DockerIcon, name: "Docker"},
   {component: AxiosIcon, name: "Axios"},
+  {component: ExpressIcon, name: "Express"},
 ];
 
 const AboutIcons: React.FC = () => {
