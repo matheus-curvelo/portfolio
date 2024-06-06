@@ -2,9 +2,11 @@ import React, {useState, useEffect} from "react";
 import {Box, Container, Typography} from "@mui/material";
 import ProjectCard from "../../components/ProjectCard";
 import "./Projects.scss";
+import svgGitHub from "../../assets/svg/github.svg";
+import svgVercel from "../../assets/svg/vercel.svg";
 
 const Projects: React.FC = () => {
-  const [projects, setProjects] = useState<any[]>([]);
+  const [gitHubProjects, setGitHubProjects] = useState<any[]>([]);
   const [vercelProjects, setVercelProjects] = useState<any[]>([]);
 
   // Token de acesso pessoal Vercel
@@ -17,7 +19,7 @@ const Projects: React.FC = () => {
           "https://api.github.com/users/matheus-curvelo/repos"
         );
         const data = await response.json();
-        setProjects(data);
+        setGitHubProjects(data);
       } catch (error) {
         console.error("Erro ao buscar projetos do GitHub:", error);
       }
@@ -48,12 +50,14 @@ const Projects: React.FC = () => {
           <Typography variant="h1">Projetos</Typography>
           <Typography variant="h2">Projetos GitHub</Typography>
           <Box className="projects__box_item" component="div">
-            {projects.map((project: any) => (
+            {gitHubProjects.map((project: any) => (
               <ProjectCard
                 key={project.id}
                 name={project.name}
                 description={project.description}
                 url={project.html_url}
+                svg={svgGitHub}
+                titleIcon="GitHub"
               />
             ))}
           </Box>
@@ -69,6 +73,8 @@ const Projects: React.FC = () => {
                     : "No description"
                 }
                 url={`https://vercel.com/matheuscurvelos-projects/${project.name}`}
+                svg={svgVercel}
+                titleIcon="Vercel"
               />
             ))}
           </Box>
