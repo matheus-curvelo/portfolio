@@ -1,5 +1,8 @@
 #contact {
     .contact__box {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
         a,
         button {
