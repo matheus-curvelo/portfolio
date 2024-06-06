@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+import React from "react";
+import {Box, Link, Typography} from "@mui/material";
 import "./ProjectCard.scss";
 
 interface Project {
@@ -8,12 +8,14 @@ interface Project {
   url: string;
 }
 
-const ProjectCard: React.FC<Project> = ({ name, description, url }) => {
+const ProjectCard: React.FC<Project> = ({name, description, url}) => {
   return (
     <Box className="project-card">
-      <Typography variant="h2">{name}</Typography>
+      <Typography variant="h4">{name}</Typography>
       <Typography variant="body1">{description}</Typography>
-      <a href={url} target="_blank" rel="noopener noreferrer">Ver projeto</a>
+      <Link href={url} target="_blank" rel="noopener noreferrer">
+        Ver projeto
+      </Link>
     </Box>
   );
 };
