@@ -29,7 +29,7 @@ const SocialIcons: React.FC = () => {
   return (
     <>
       {socialLinks.map((link, index) => (
-        <Link key={index} color="inherit" href={link.href}>
+        <Link className='header__icons_item' key={index} color="inherit" href={link.href}>
           {link.icon}
         </Link>
       ))}
