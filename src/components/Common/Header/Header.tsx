@@ -8,19 +8,17 @@ import {
   Drawer,
   List,
   ListItem,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Header.scss";
 import "animate.css";
 import ThemeSwitch from "../.././ThemeSwitch";
 import NavLinkItem from "../.././NavLinkItem";
-import IconButtonItem from "../.././IconButtonItem";
-import {
-  faLinkedin,
-  faWhatsapp,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -55,22 +53,20 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
       <Box className="bottom_box">
         <Box className="drawer__icons" component="div">
           <ListItem>
-            <IconButtonItem
-              href="https://www.linkedin.com/in/matheus-curvelo"
-              icon={faLinkedin}
-            />
-            <IconButtonItem
-              href="https://github.com/matheus-curvelo"
-              icon={faGithub}
-            />
-            <IconButtonItem
-              href="mailto:matheuscurvelo@gmail.com"
-              icon={faEnvelope}
-            />
-            <IconButtonItem
-              href="https://wa.me/5511982382008"
-              icon={faWhatsapp}
-            />
+            <Link
+              color="inherit"
+              href="https://www.linkedin.com/in/matheus-curvelo">
+              <LinkedInIcon />
+            </Link>
+            <Link color="inherit" href="https://github.com/matheus-curvelo">
+              <GitHubIcon />
+            </Link>
+            <Link color="inherit" href="mailto:matheuscurvelo@gmail.com">
+              <EmailIcon />
+            </Link>
+            <Link color="inherit" href="https://wa.me/5511982382008">
+              <WhatsAppIcon />
+            </Link>
           </ListItem>
         </Box>
         <Box className="drawer__theme_switch" component="div">
@@ -113,22 +109,20 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkTheme}) => {
                 <NavLinkItem to="/contato" label="Contato" />
               </Box>
               <Box className="header__icons animate__animated animate__fadeInRight">
-                <IconButtonItem
-                  href="https://www.linkedin.com/in/matheus-curvelo"
-                  icon={faLinkedin}
-                />
-                <IconButtonItem
-                  href="https://github.com/matheus-curvelo"
-                  icon={faGithub}
-                />
-                <IconButtonItem
-                  href="mailto:matheuscurvelo@gmail.com"
-                  icon={faEnvelope}
-                />
-                <IconButtonItem
-                  href="https://wa.me/5511982382008"
-                  icon={faWhatsapp}
-                />
+                <Link
+                  color="inherit"
+                  href="https://www.linkedin.com/in/matheus-curvelo">
+                  <LinkedInIcon />
+                </Link>
+                <Link color="inherit" href="https://github.com/matheus-curvelo">
+                  <GitHubIcon />
+                </Link>
+                <Link color="inherit" href="mailto:matheuscurvelo@gmail.com">
+                  <EmailIcon />
+                </Link>
+                <Link color="inherit" href="https://wa.me/5511982382008">
+                  <WhatsAppIcon />
+                </Link>
                 <ThemeSwitch
                   toggleTheme={toggleTheme}
                   isDarkTheme={isDarkTheme}
