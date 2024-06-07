@@ -7,7 +7,6 @@ interface AboutProps {
   biography: string[];
   education: string[];
   experience: string[];
-  projects: string[];
   philosophy: string;
 }
 
@@ -15,7 +14,6 @@ const About: React.FC<AboutProps> = ({
   biography,
   education,
   experience,
-  projects,
   philosophy,
 }) => {
   return (
@@ -48,15 +46,6 @@ const About: React.FC<AboutProps> = ({
               key={index}
               component="p"
               dangerouslySetInnerHTML={{__html: exp}}
-            />
-          ))}
-
-          <Typography variant="h4">Ultimos Projetos</Typography>
-          {projects.map((proj, index) => (
-            <Typography
-              key={index}
-              component="p"
-              dangerouslySetInnerHTML={{__html: proj}}
             />
           ))}
 
