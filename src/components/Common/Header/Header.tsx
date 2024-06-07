@@ -6,15 +6,14 @@ import {
   Box,
   IconButton,
   Drawer,
-  List,
-  ListItem,
+  List
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Header.scss";
 import "animate.css";
-import ThemeSwitch from "../.././ThemeSwitch";
-import NavLinkItem from "../.././NavLinkItem";
-import SocialIcons from "../../SocialIcons"; // Importe o componente de ícones sociais
+import ThemeSwitch from "../../ThemeSwitch";
+import HeaderIcons from "../../HeaderIcons";
+import HeaderLinks from "../../HeaderLinks";
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -31,31 +30,14 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
   const menuItems = (
     <List id="drawer">
       <Box className="drawer__links" component="div">
-        <ListItem button component={NavLinkItem} to="/" label="Home" />
-        <ListItem button component={NavLinkItem} to="/sobre" label="Sobre" />
-        <ListItem
-          button
-          component={NavLinkItem}
-          to="/projetos"
-          label="Projetos"
-        />
-        <ListItem
-          button
-          component={NavLinkItem}
-          to="/contato"
-          label="Contato"
-        />
+        <HeaderLinks />
       </Box>
       <Box className="bottom_box">
         <Box className="drawer__icons" component="div">
-          <ListItem>
-            <SocialIcons />
-          </ListItem>
+          <HeaderIcons />
         </Box>
         <Box className="drawer__theme_switch" component="div">
-          <ListItem>
-            <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-          </ListItem>
+          <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         </Box>
       </Box>
     </List>
@@ -89,23 +71,17 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, isDarkTheme }) => {
               className="header__box"
             >
               <Box className="header__links animate__animated animate__fadeInLeft">
-                <NavLinkItem to="/" label="Home" />
-                <NavLinkItem to="/sobre" label="Sobre" />
-                <NavLinkItem to="/projetos" label="Projetos" />
-                <NavLinkItem to="/contato" label="Contato" />
+                <HeaderLinks />
               </Box>
               <Box className="header__icons animate__animated animate__fadeInRight">
-                <SocialIcons />
-                <ThemeSwitch
-                  toggleTheme={toggleTheme}
-                  isDarkTheme={isDarkTheme}
-                />
+                <HeaderIcons />
+                <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
               </Box>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-      <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
+      <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
         {menuItems}
       </Drawer>
     </>
