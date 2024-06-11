@@ -16,7 +16,7 @@ const Home: React.FC<HomeProps> = ({greeting, introduction, description}) => {
         <Box className="home__box" component="div">
           <Box className="animate__animated animate__pulse" component="div">
             <Typography
-              className="animate__animated animate__rollIn"
+              className="animate__animated animate__lightSpeedInRight"
               variant="h1">
               {greeting}
             </Typography>
