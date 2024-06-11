@@ -14,7 +14,7 @@ const Home: React.FC<HomeProps> = ({greeting, introduction, description}) => {
     <Box id="home" className="animate__animated animate__fadeIn" component="section" py={8}>
       <Container maxWidth="xl">
         <Box className="home__box" component="div">
-          <Box className="animate__animated animate__pulse" component="div">
+          <Box component="div">
             <Typography
               className="animate__animated animate__lightSpeedInRight"
               variant="h1">
