@@ -11,7 +11,7 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({greeting, introduction, description}) => {
   return (
-    <Box id="home" component="section" py={8}>
+    <Box id="home" className="animate__animated animate__fadeIn" component="section" py={8}>
       <Container maxWidth="xl">
         <Box className="home__box" component="div">
           <Box className="animate__animated animate__pulse" component="div">

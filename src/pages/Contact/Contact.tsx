@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import emailjs from "emailjs-com";
 import "./Contact.scss";
+import "animate.css";
 
 type ContactProps = {
   contactTitle: string;
@@ -69,7 +70,7 @@ const Contact: React.FC<ContactProps> = ({
   };
 
   return (
-    <Box id="contact" component="section" py={8}>
+    <Box id="contact" className="animate__animated animate__fadeIn" component="section" py={8}>
       <Container maxWidth="xl">
         <Box className="contact__box" component="div">
           <Typography variant="h1" gutterBottom>

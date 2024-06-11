@@ -2,6 +2,7 @@ import React from "react";
 import "./About.scss";
 import {Box, Container, Typography} from "@mui/material";
 import AboutIcons from "../../components/AboutIcons";
+import "animate.css";
 
 interface AboutProps {
   biography: string[];
@@ -17,7 +18,7 @@ const About: React.FC<AboutProps> = ({
   philosophy,
 }) => {
   return (
-    <Box id="about" component="section" py={8}>
+    <Box id="about" className="animate__animated animate__fadeIn" component="section" py={8}>
       <Container maxWidth="xl">
         <Box className="about__box" component="div">
           <Typography variant="h1">Sobre Mim</Typography>

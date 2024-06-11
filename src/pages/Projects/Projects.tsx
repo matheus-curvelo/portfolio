@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Box, Container, Typography} from "@mui/material";
 import ProjectCard from "../../components/ProjectCard";
 import "./Projects.scss";
+import "animate.css";
 
 interface Project {
   id: number;
@@ -38,7 +39,7 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <Box id="projects" component="section" py={8}>
+    <Box id="projects" className="animate__animated animate__fadeIn" component="section" py={8}>
       <Container maxWidth="xl">
         <Box className="projects__box" component="div">
           <Typography variant="h1">Projetos</Typography>
