@@ -1,29 +1,29 @@
 import React from "react";
 import {Box, Link, Typography} from "@mui/material";
 import "./ProjectCard.scss";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 interface Project {
   name: string;
   description: string;
   url: string;
-  svg: string;
-  titleIcon: string;
 }
 
-const ProjectCard: React.FC<Project> = ({name, description, url, svg, titleIcon}) => {
+const ProjectCard: React.FC<Project> = ({name, description, url}) => {
   return (
     <Box className="project_card">
       <Typography variant="h4">{name}</Typography>
       <Typography variant="body1">{description}</Typography>
-      <Box className="project_card__links">
+      {/* <Box className="project_card__links"> */}
         <Link
+          color="inherit"
           className="project_card__link"
           href={url}
           target="_blank"
           rel="noopener noreferrer">
-          <img className="project_card__image" title={titleIcon} src={svg} alt="SVG" />
+          <GitHubIcon />
         </Link>
-      </Box>
+      {/* </Box> */}
     </Box>
   );
 };
