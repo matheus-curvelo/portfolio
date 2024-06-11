@@ -1,7 +1,8 @@
 import React from "react";
-import {Box, Link, Typography} from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import InfoIcon from "@mui/icons-material/Info";
 import "./ProjectCard.scss";
 
@@ -12,7 +13,7 @@ interface Project {
   homepage?: string;
 }
 
-const ProjectCard: React.FC<Project> = ({name, description, url, homepage}) => {
+const ProjectCard: React.FC<Project> = ({ name, description, url, homepage }) => {
   return (
     <Box className="project_card">
       <Typography variant="h4">{name}</Typography>
@@ -25,7 +26,7 @@ const ProjectCard: React.FC<Project> = ({name, description, url, homepage}) => {
         rel="noopener noreferrer">
         <GitHubIcon />
       </Link>
-      {homepage && (
+      {homepage ? (
         <Link
           color="inherit"
           className="project_card__page_url"
@@ -34,6 +35,8 @@ const ProjectCard: React.FC<Project> = ({name, description, url, homepage}) => {
           rel="noopener noreferrer">
           <VisibilityIcon />
         </Link>
+      ) : (
+        <VisibilityOffIcon className="project_card__page_url" />
       )}
     </Box>
   );
