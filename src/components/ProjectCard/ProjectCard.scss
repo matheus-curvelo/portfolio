@@ -1,3 +1,54 @@
 @import '../../styles/variables.scss';
 
-.project-card {}
+.project_card {
+
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    box-sizing: border-box;
+
+    @media (max-width: $sm) {
+        flex-basis: 100%;
+    }
+
+    .project_card__title {
+        text-transform: capitalize;
+    }
+
+    .project_card__icons {
+        display: flex;
+        gap: .75rem;
+
+        .project_card__icon {
+            cursor: pointer;
+        }
+    }
+}
+
+// Modal
+
+.modal_project {
+    .modal_project__box {
+        padding: 1.75rem 3.25rem;
+        border-radius: 0.75rem;
+        max-width: 75%;
+        margin: auto;
+        text-align: center;
+        margin: 1.25rem auto;
+
+        @media (max-width: $sm) {
+            padding: 1.25rem 2.25rem;
+
+        }
+
+        .modal_project_card__icons {
+            display: flex;
+            justify-content: center;
+            gap: .75rem;
+
+            .modal_project_card__icon {
+                cursor: pointer;
+            }
+        }
+    }
+}

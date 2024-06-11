@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
       <Container maxWidth="xl">
         <Box className="projects__box" component="div">
           <Typography variant="h1">Projetos</Typography>
-          <Typography variant="h2">GitHub</Typography>
+          <Typography variant="h4">GitHub</Typography>
           <Box className="projects__box_item" component="div">
             {gitHubProjects.map(project => (
               <ProjectCard

@@ -31,6 +31,10 @@ body,
     }
 }
 
+:focus-visible {
+    outline: none;
+}
+
 // Outros Estilos
 
 .color_primary {
