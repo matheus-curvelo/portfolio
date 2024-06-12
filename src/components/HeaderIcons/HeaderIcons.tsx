@@ -30,12 +30,16 @@ const HeaderIcons: React.FC = () => {
     <>
       {headerIcons.map((link, index) => (
         <Link
-          className="header__icon"
-          key={index}
-          color="inherit"
-          href={link.href}>
-          {link.icon}
-        </Link>
+        className="header__icon"
+        key={index}
+        color="inherit"
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link.icon}
+      </Link>
+      
       ))}
     </>
   );
