@@ -3,6 +3,7 @@
 .content-page {
     flex: 1;
     padding-top: 4.125rem;
+    overflow: hidden;
 
     @media (max-width: $sm) {
         padding-top: 3.625rem;
