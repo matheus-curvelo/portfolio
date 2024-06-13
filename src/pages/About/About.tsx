@@ -50,7 +50,6 @@ const About: React.FC<AboutProps> = ({
             />
           ))}
 
-          <Typography variant="h4">Habilidades Técnicas</Typography>
           <AboutIcons />
           <Typography variant="h4">Filosofia de Trabalho</Typography>
           <Typography

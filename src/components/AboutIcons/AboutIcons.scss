@@ -1,46 +1,49 @@
 @import '../../styles/variables.scss';
 
-.icons {
-    display: flex;
-    gap: 2.25rem;
-    flex-wrap: wrap;
-    max-width: 900px;
-    padding: 2.25rem 0;
-
-    @media (max-width: $md) {
-        justify-content: space-between;
-    }
-
-    .icon {
+.about__icons {
+    .about__icons_item {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        cursor: pointer;
-        box-sizing: border-box;
-        gap: 5px;
+        gap: 2.25rem;
+        flex-wrap: wrap;
+        max-width: 900px;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
 
         @media (max-width: $md) {
-            flex: 0 1 calc(33.333% - 2.25rem);
+            justify-content: space-between;
         }
 
-        @media (max-width: $sm) {
-            flex: 0 1 calc(50% - 2rem);
-        }
+        .icon {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+            box-sizing: border-box;
+            gap: 5px;
 
-        @media (min-width: $md) {
+            @media (max-width: $md) {
+                flex: 0 1 calc(33.333% - 2.25rem);
+            }
 
-            &:hover {
-                color: $primary;
+            @media (max-width: $sm) {
+                flex: 0 1 calc(50% - 2rem);
+            }
 
-                .icon__svg {
-                    transform: translateY(-0.25rem);
+            @media (min-width: $md) {
+
+                &:hover {
+                    color: $primary;
+
+                    .icon__svg {
+                        transform: translateY(-0.25rem);
+                    }
                 }
             }
-        }
 
-        .icon__svg {
-            transition: transform .3s ease-in-out;
+            .icon__svg {
+                transition: transform .3s ease-in-out;
+            }
         }
     }
 }
