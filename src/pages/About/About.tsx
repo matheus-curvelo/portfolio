@@ -50,7 +50,7 @@ const About: React.FC<AboutProps> = ({
             />
           ))}
 
-          <AboutIcons />
+          <AboutIcons shuffle={true} />
           <Typography variant="h4">Filosofia de Trabalho</Typography>
           <Typography
             component="p"
