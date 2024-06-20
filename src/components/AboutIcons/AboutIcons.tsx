@@ -6,12 +6,12 @@ import { ReactComponent as HtmlIcon } from "../../assets/svg/html.svg";
 import { ReactComponent as CssIcon } from "../../assets/svg/css.svg";
 import { ReactComponent as JavaScriptIcon } from "../../assets/svg/javascript.svg";
 import { ReactComponent as TypeScriptIcon } from "../../assets/svg/typescript.svg";
+import { ReactComponent as BootstrapIcon } from "../../assets/svg/bootstrap.svg";
+import { ReactComponent as MaterialUIIcon } from "../../assets/svg/mui.svg";
+import { ReactComponent as SassIcon } from "../../assets/svg/sass.svg";
 import { ReactComponent as ReactIcon } from "../../assets/svg/react.svg";
 import { ReactComponent as NodeJsIcon } from "../../assets/svg/nodejs.svg";
 import { ReactComponent as NextJsIcon } from "../../assets/svg/nextjs.svg";
-import { ReactComponent as SassIcon } from "../../assets/svg/sass.svg";
-import { ReactComponent as BootstrapIcon } from "../../assets/svg/bootstrap.svg";
-import { ReactComponent as MaterialUIIcon } from "../../assets/svg/mui.svg";
 import { ReactComponent as GitHubIcon } from "../../assets/svg/github.svg";
 import { ReactComponent as GitIcon } from "../../assets/svg/git.svg";
 import { ReactComponent as DockerIcon } from "../../assets/svg/docker.svg";
@@ -24,12 +24,12 @@ const skills = [
   { component: CssIcon, name: "CSS" },
   { component: JavaScriptIcon, name: "JavaScript" },
   { component: TypeScriptIcon, name: "TypeScript" },
+  { component: BootstrapIcon, name: "Bootstrap" },
+  { component: MaterialUIIcon, name: "Material UI" },
+  { component: SassIcon, name: "Sass" },
   { component: ReactIcon, name: "React" },
   { component: NodeJsIcon, name: "NodeJs" },
   { component: NextJsIcon, name: "NextJs" },
-  { component: SassIcon, name: "Sass" },
-  { component: BootstrapIcon, name: "Bootstrap" },
-  { component: MaterialUIIcon, name: "Material UI" },
   { component: GitHubIcon, name: "GitHub" },
   { component: GitIcon, name: "Git" },
   { component: DockerIcon, name: "Docker" },
