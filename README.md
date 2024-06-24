@@ -23,34 +23,6 @@ Este portfólio é uma aplicação web desenvolvida com React e utiliza Material
 - **SASS/SCSS**: CSS com superpoderes, usado para estilização da aplicação.
 - **Animate.css**: Biblioteca de animações CSS.
 
-## Estrutura do Projeto
-
-```bash
-src/
-├── assets/
-│   ├── animations/
-│   ├── images/
-│   └── svg/
-├── components/
-│   └── Common/
-├── config/
-├── pages/
-│   ├── About/
-│   ├── Contact/
-│   ├── Home/
-│   └── Projects/
-├── style/
-│   ├── global.scss
-│   ├── typography.scss
-│   └── variables.scss
-├── App.scss
-├── App.tsx
-├── index.scss
-├── index.tsx
-├── svg.d.ts
-└── theme.ts
-```
-
 ## Instalação e Execução
 Siga os passos abaixo para rodar o projeto localmente:
 
