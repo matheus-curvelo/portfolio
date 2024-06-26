@@ -27,7 +27,7 @@ body,
     background-color: rgba($primary, 0.75);
 
     &:hover {
-        background-color: rgba(green, 1);
+        background-color: rgba($secondary, .75);
     }
 }
 
