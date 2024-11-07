@@ -8,6 +8,7 @@ import { ReactComponent as JavaScriptIcon } from "../../assets/svg/javascript.sv
 import { ReactComponent as TypeScriptIcon } from "../../assets/svg/typescript.svg";
 import { ReactComponent as BootstrapIcon } from "../../assets/svg/bootstrap.svg";
 import { ReactComponent as MaterialUIIcon } from "../../assets/svg/mui.svg";
+import { ReactComponent as TailwindIcon } from "../../assets/svg/tailwind.svg";
 import { ReactComponent as SassIcon } from "../../assets/svg/sass.svg";
 import { ReactComponent as ReactIcon } from "../../assets/svg/react.svg";
 import { ReactComponent as NodeJsIcon } from "../../assets/svg/nodejs.svg";
@@ -16,8 +17,8 @@ import { ReactComponent as GitHubIcon } from "../../assets/svg/github.svg";
 import { ReactComponent as GitIcon } from "../../assets/svg/git.svg";
 import { ReactComponent as DockerIcon } from "../../assets/svg/docker.svg";
 import { ReactComponent as ReactNativeIcon } from "../../assets/svg/reactnative.svg";
-import { ReactComponent as ExpressIcon } from "../../assets/svg/express.svg";
-import { ReactComponent as GoLangIcon } from "../../assets/svg/golang.svg";
+import { ReactComponent as VueIcon } from "../../assets/svg/vue.svg";
+
 
 const skills = [
   { component: HtmlIcon, name: "HTML" },
@@ -26,6 +27,7 @@ const skills = [
   { component: TypeScriptIcon, name: "TypeScript" },
   { component: BootstrapIcon, name: "Bootstrap" },
   { component: MaterialUIIcon, name: "Material UI" },
+  { component: TailwindIcon, name: "Tailwind" },
   { component: SassIcon, name: "Sass" },
   { component: ReactIcon, name: "React" },
   { component: NodeJsIcon, name: "NodeJs" },
@@ -37,8 +39,7 @@ const skills = [
 
 const learningSkills = [
   { component: ReactNativeIcon, name: "React Native" },
-  { component: ExpressIcon, name: "Express" },
-  { component: GoLangIcon, name: "Golang" },
+  { component: VueIcon, name: "Vue" },
 ];
 
 // Função para embaralhar uma array
