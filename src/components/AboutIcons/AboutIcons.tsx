@@ -18,6 +18,7 @@ import { ReactComponent as GitIcon } from "../../assets/svg/git.svg";
 import { ReactComponent as DockerIcon } from "../../assets/svg/docker.svg";
 import { ReactComponent as ReactNativeIcon } from "../../assets/svg/reactnative.svg";
 import { ReactComponent as VueIcon } from "../../assets/svg/vue.svg";
+import { ReactComponent as FlutterIcon } from "../../assets/svg/flutter.svg";
 
 
 const skills = [
@@ -40,6 +41,7 @@ const skills = [
 const learningSkills = [
   { component: ReactNativeIcon, name: "React Native" },
   { component: VueIcon, name: "Vue" },
+  { component: FlutterIcon, name: "Flutter" },
 ];
 
 // Função para embaralhar uma array

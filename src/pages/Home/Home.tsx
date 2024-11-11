@@ -6,7 +6,7 @@ import AnimationComputer from "../../components/AnimationComputer";
 interface HomeProps {
   greeting: string;
   introduction: string;
-  description: string;
+  description: string[];
 }
 
 const Home: React.FC<HomeProps> = ({greeting, introduction, description}) => {
@@ -21,10 +21,13 @@ const Home: React.FC<HomeProps> = ({greeting, introduction, description}) => {
               {greeting}
             </Typography>
             <Typography variant="h4">{introduction}</Typography>
-            <Box
-              component="p"
-              dangerouslySetInnerHTML={{__html: description}}
-            />
+            {description.map((paragraph, index) => (
+              <Box
+                key={index}
+                component="p"
+                dangerouslySetInnerHTML={{__html: paragraph}}
+              />
+            ))}
           </Box>
           <AnimationComputer />
         </Box>
