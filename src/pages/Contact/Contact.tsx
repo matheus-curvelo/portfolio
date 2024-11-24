@@ -38,16 +38,18 @@ const Contact: React.FC<ContactProps> = ({
 
     const form = event.currentTarget as HTMLFormElement;
     const formData = new FormData(form);
+
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const subject = formData.get("subject") as string;
     const message = formData.get("message") as string;
 
     const templateParams = {
-      name,
-      email,
-      subject,
-      message,
+      from_name: name,
+      to_name: "Matheus",
+      email: email,
+      subject: subject,
+      message: message,
     };
 
     emailjs
@@ -70,7 +72,11 @@ const Contact: React.FC<ContactProps> = ({
   };
 
   return (
-    <Box id="contact" className="animate__animated animate__fadeIn" component="section" py={8}>
+    <Box
+      id="contact"
+      className="animate__animated animate__fadeIn"
+      component="section"
+      py={8}>
       <Container maxWidth="xl">
         <Box className="contact__box" component="div">
           <Typography variant="h1" gutterBottom>
